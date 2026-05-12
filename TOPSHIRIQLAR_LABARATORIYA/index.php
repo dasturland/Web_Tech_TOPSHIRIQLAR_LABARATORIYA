@@ -59,5 +59,29 @@ $tasks = [
         </ul>
         <br>
     <?php endforeach; ?>
+
+    <!-- Lab 6.5 - Sessions, Cookies, Headers, AJAX -->
+    <h2>Laboratoriya 6.5 - Sessiyalar va AJAX</h2>
+    <ul>
+        <li><a href="lab_6_5/index.php">Lab 6.5 index</a></li>
+        <li><a href="lab_6_5/task1.php">1. Remember me (cookie)</a></li>
+        <li><a href="lab_6_5/task2.php">2. Session counter (visits)</a></li>
+        <li><a href="lab_6_5/task3.php">3. Simple cart (session)</a></li>
+        <li><a href="lab_6_5/task5.php?token=secret123">4. API (token auth, headers, cache)</a></li>
+        <li><a href="lab_6_5/task5_redirect.php">6. 301 redirect to task5</a></li>
+        <li><a href="lab_6_5/task5_test.html">8. AJAX live search test</a></li>
+    </ul>
+
+    <!-- Lab 6.6 - SQLite, Auth, Products, Posts -->
+    <h2>Laboratoriya 6.6 - SQLite va autentifikatsiya</h2>
+    <ul>
+        <li><a href="lab_6_6/init_db.php">Init DB (run once)</a></li>
+        <li><a href="lab_6_6/register.php">1. Register</a></li>
+        <li><a href="lab_6_6/login.php">1. Login</a></li>
+        <li><a href="lab_6_6/task5.php">2-4. Products (CSV, filter, soft delete)</a></li>
+        <li><a href="lab_6_6/posts.php">5. Posts & Comments</a></li>
+        <li><a href="lab_6_6/change_password.php">6. Change password</a></li>
+        <li><a href="lab_6_6/stats.php">7. Statistics (GROUP BY)</a></li>
+    </ul>
 </body>
 </html>
