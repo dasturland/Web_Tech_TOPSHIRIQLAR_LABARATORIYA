@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>AJAX search test</title>
+<script>
+async function search(q){
+    const url = '/lab_6_5/task5.php?token=secret123&query=' + encodeURIComponent(q);
+    const res = await fetch(url);
+    if (res.status === 401) { document.getElementById('out').textContent = '401 Unauthorized'; return; }
+    const data = await res.json();
+    // simple filter on client for demo (server doesn't implement query param)
+    const filtered = data.filter(p=>p.name.toLowerCase().includes(q.toLowerCase()));
+    document.getElementById('out').innerHTML = '<ul>' + filtered.map(p=>'<li>'+p.name+'</li>').join('') + '</ul>';
+}
+
+window.addEventListener('DOMContentLoaded', ()=>{
+    const input = document.getElementById('q');
+    input.addEventListener('input', ()=>{ search(input.value); });
+});
+</script>
+</head>
+<body>
+<h2>AJAX live search</h2>
+<input id="q" placeholder="Type to search...">
+<div id="out"></div>
+</body>
+</html>
